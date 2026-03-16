@@ -1,0 +1,22 @@
+[package]
+name = "ffmpeg-wrapper-core"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kuzma-Dev"]
+description = "Low-level FFmpeg FFI wrapper optimized for zero-copy video processing"
+license = "MIT"
+repository = "https://github.com/Kuzma-Dev/NonBinaryNull.github.io"
+keywords = ["ffmpeg", "video", "ffi", "low-level", "zero-copy"]
+categories = ["multimedia", "external-ffi-bindings"]
+
+[dependencies]
+libc = "0.2"
+anyhow = "1.0"
+log = "0.4"
+
+[dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "frame_operations"
+harness = false
