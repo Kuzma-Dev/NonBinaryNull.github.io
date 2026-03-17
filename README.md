@@ -40,10 +40,9 @@ let raw_ptr = frame.as_ptr(); // No overhead
 ```mermaid
 graph TD
     A[Safe Rust Application] -->|FFI| B[ffmpeg-wrapper-core]
-    B --> C[struct Frame { raw: *mut AVFrame }]
-    C --> D[C API: av_frame_alloc()]
-    C --> E[C API: av_frame_free()]
-    C --> F[Zero-copy references]
+    B --> C["struct Frame { raw: *mut AVFrame }"]
+    C --> D["C API: av_frame_alloc()"]
+    C --> E["C API: av_frame_free()"]
 ```
 
 ## 📊 Performance Benchmarks
